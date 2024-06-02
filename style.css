@@ -1,18 +1,104 @@
 html,
 body {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1400px;
-    height: 100%;
-    min-height: 750px;
-    position: relative;
-    background: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: rgb(0, 9, 22);
+  color: #fff;
+  font-family:
+    "Graphik",
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: center center no-repeat url("./assets/background.png");
+}
+
+.frame {
+  max-width: 600px;
+  width: 90%;
+  margin: 1rem auto;
+  position: relative;
+}
+
 img {
-    width: 100%;
-    max-width: 1400px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 300;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.cta-lg {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  background: linear-gradient(#fff, #999);
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-sm {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  background: linear-gradient(#bbb, #666);
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-xxlg {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(#bbb, #333);
+  background-clip: text;
+  color: transparent;
+}
+
+span.em-word {
+  white-space: pre;
+  background: linear-gradient(#ff3399, #cc0066);
+  background-clip: text;
+  color: transparent;
+}
+span.em-word.white {
+  white-space: pre;
+  color: #fff;
+}
+span.logo-warp {
+  font-weight: 300;
+  white-space: pre;
+}
+span.logo-drive {
+  font-weight: 600;
+  white-space: pre;
 }
