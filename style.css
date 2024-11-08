@@ -20,6 +20,10 @@ body {
     sans-serif;
 }
 
+:root {
+  --primary-brand: #ffc474;
+}
+
 * {
   box-sizing: content-box;
 }
@@ -28,23 +32,44 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: center center no-repeat url("./assets/background.png");
 }
 
 .frame {
-  max-width: 600px;
   width: 90%;
   padding: 1rem;
   margin: 0rem auto;
   position: relative;
+  min-height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-img {
-  width: 100%;
-  max-width: 1400px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+  .frame {
+    max-width: 380px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 85%;
+  }
+  .frame {
+    max-width: 750px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Syncopate";
 }
 
 h1,
@@ -56,37 +81,64 @@ h4 {
   justify-content: center;
   flex-wrap: wrap;
   font-weight: 300;
+  color: var(--primary-brand);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-.cta-lg {
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
+.text-gradient {
   background: linear-gradient(#fff, #999);
   background-clip: text;
-  color: transparent;
 }
 
-.cta-sm {
+.social-image-link {
+  box-sizing: border-box;
+  padding: 0.6rem;
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+img.social-image-link:hover {
+  padding: 0.5rem;
+  border: 0.1rem solid var(--primary-brand);
+}
+
+.cta-1 {
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  background: linear-gradient(#bbb, #666);
+  color: var(--primary-brand);
+}
+
+.cta-2 {
+  margin-top: 15vh;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  background: linear-gradient(#ccc, #888);
   background-clip: text;
   color: transparent;
 }
 
 .cta-xxlg {
-  font-size: 3.5rem;
+  margin-top: 15vh;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  background: linear-gradient(#bbb, #333);
+  background: linear-gradient(#ddd, #666);
   background-clip: text;
   color: transparent;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.footer {
+  width: 100%;
+  text-align: right;
 }
 
 span.em-word {
@@ -96,14 +148,19 @@ span.em-word {
   color: transparent;
 }
 span.em-word.white {
-  white-space: pre;
+  background: none;
   color: #fff;
 }
+span.em-word.gold {
+  background: none;
+  color: var(--primary-brand);
+}
+
 span.logo-warp {
   font-weight: 300;
   white-space: pre;
 }
 span.logo-drive {
-  font-weight: 600;
+  font-weight: 700;
   white-space: pre;
 }
