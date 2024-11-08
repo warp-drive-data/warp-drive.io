@@ -22,6 +22,7 @@ body {
 
 :root {
   --primary-brand: #ffc474;
+  --page-height: calc(100vh - env(safe-area-inset-top, 48px) - env(safe-area-inset-bottom, 0));
 }
 
 * {
@@ -39,7 +40,7 @@ body {
   padding: 1rem;
   margin: 0rem auto;
   position: relative;
-  min-height: calc(100vh - 2rem);
+  min-height: var(--page-height);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
